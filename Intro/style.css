@@ -1,0 +1,51 @@
+.img {
+    width: 100px;
+    height: 100px;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.title small {
+    /* font-size: 10px; */
+    color: green;
+    background: black;
+}
+
+
+.title-error {
+    color: red;
+}
+
+.title-blue {
+    color: #70889e;
+}
+
+.small {
+    color: blueviolet;
+}
+
+.description {
+    padding: 20px;
+    /* margin: 10px; */
+    margin-bottom: 20px;
+    /* Схлопывание марджинов */
+    /* margin-top: 10px;
+    margin-left: 15; */
+    background: #5f5f8f;
+    color: #fff;
+    max-width: 1000px;
+    border: 8px solid #6ed296;
+    border-radius: 10px;
+    text-align: center;
+    /* background-image: ; */
+}
+
+/* body {
+    background: green;
+}
+
+.html {
+background: red;
+} */

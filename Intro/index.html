@@ -1,12 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Cокращение языков -->
+<html lang="ru" class="html">
 <head>
+    <!-- Метатэги: базовые, расширенные -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Test | text</title>
+    <!-- Подключаем фавикон -->
+    <!-- https://www.flaticon.com/search?word=earth -->
+    <!-- https://favicomatic.com/ -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+  <!-- подключению стилей -->
+<link rel="stylesheet" href="./style.css">
+
+<style>
+.img {
+    width: 100px;
+    height: 100px;
+}
+</style>
+
 </head>
-<body>
+<body class="body">
+    <!-- Тэги: атрибуты базовые и кастомные(data-*) -->
+    <!-- <img src="./mstile-310x310.png" data-user="user" alt="Планета земля" width="310" height="310" /> -->
+
+    <!-- Основные теги по подключению картинок -->
+    <img src="./mstile-310x310.png" data-user="user" alt="Планета земля" />
+    <picture>
+        <source srcset="./mstile-144x144.png" media="(max-width: 600px)">
+        <source type="image/webp" srcset="./mstile-144x144.webp" media="(max-width: 600px)">
+        <img src="./mstile-310x310.png" data-user="user" alt="Планета земля" />
+    </picture>
+    <!-- Дополнительный тег по подключению картинок -->
+    <figure>
+        <picture>
+            <source srcset="./mstile-144x144.png" media="(max-width: 600px)">
+            <source type="image/webp" srcset="./mstile-144x144.webp" media="(max-width: 600px)">
+            <img class="img" src="./mstile-310x310.png" data-user="user" alt="Планета земля" />
+        </picture>
+        <figcaption>Планета земля</figcaption>
+    </figure>
+
+    <!-- Инлайновые стили -->
+    <div style="color:blueviolet;" >Какой-то текст</div>
+
+<div>Заголовки</div>
+
+<h1 class="title title-error title-blue">
+    Заголовк
+    <small class="small">внутренний маленький</small>
+</h1>
+
+<h2 class="title">Заголовки</h2>
+<h3 class="title title-blue">Заголовки синий</h3>
+<h4 class="title">Заголовки</h4>
+<h5 class="title title-blue">Заголовки синий</h5>
+
+<!-- Посмотреть что можно вкладывать а что нельзя -->
+<p class="description">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti atque, dignissimos quidem vitae tempore ut laboriosam! Qui non, expedita illo, officia minima natus nihil aut, excepturi esse sequi inventore earum.
+</p>
+
+<p class="description">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti atque, dignissimos quidem vitae tempore ut laboriosam! Qui non, expedita illo, officia minima natus nihil aut, excepturi esse sequi inventore earum.
+</p>
+
+<a>tytyty</a>
+
+<ul>
+    <li>2323</li>
+    <li>2323</li>
+    <li>2323</li>
+    <li>2323</li>
+</ul>
+
+<!-- a, ul, li, button, input, textarea, select, hr, span -->
+<!-- форматы цвета hex, rgba  -->
+<!-- разобраться с id элементов  -->
+<h2 id="" class="title">Заголовки</h2>
+
+<!-- a -->
+<a href="https://favicomatic.com/" class="link" target="_blank">Link</a>
+
+<!-- ul -->
+
     
 </body>
 </html>
