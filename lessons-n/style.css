@@ -1,0 +1,26 @@
+.img {
+   width: 50;
+   height: 50;
+}
+
+.center-pic {
+   display: block;
+   margin: auto;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   border: 0;
+}
+
+.box {
+   background-image: url("fon.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   background-attachment: fixed;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   text-align: center;
+}
