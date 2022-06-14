@@ -124,10 +124,6 @@ ul {
     flex: 1 0 auto;
 }
 
-#col {
-
-}
-
 .price-item__price,
 .price-item__list {
     padding-top: 32px;
@@ -175,6 +171,81 @@ ul {
     width: 100%;
 }
 
+/* price switcher */
+.price-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.price-switcher__wrapper {
+    position: relative;
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+}
+
+.price-switcher .toggle {
+    margin: 0 24px;
+}
+
+.price-switcher span {
+    font-size: 24px;
+    color: #F5F5F5;
+    opacity: 0.5;
+}
+
+.price-switcher span:first-child {
+    opacity: 1;
+}
+
+.toggle {
+    position: relative;
+    width: 104px;
+    height: 52px;
+    background-color: #fff;
+    border-radius: 99px;
+    cursor: pointer;
+}
+
+.toggle::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 35px;
+    height: 35px;
+    background-color: #A8FF35;
+    border-radius: inherit;
+}
+
+.discont {
+    position: absolute;
+    right: -106px;
+    font-family: 'gooddognew';
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    transform: rotate(6deg);
+    margin-left: 40px;
+    top: -8px;
+}
+
+.discont::after {
+    content: '';
+    display: block;
+    margin-top: 6px;
+    margin-left: -11px;
+    height: 28px;
+    width: 35px;
+    background-image: url('../images/icons/arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(-2deg);
+}
+
 /* Подключение шрифтов */
 @font-face {
     font-family: 'Effra';
@@ -195,6 +266,17 @@ ul {
         url('../fonts/Effra-Bold.woff') format('woff'),
         url('../fonts/Effra-Bold.ttf') format('truetype');
     font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'gooddognew';
+    src: local('Effra Bold'), local('Effra-Bold'),
+        url('../fonts/gooddognew.woff2') format('woff2'),
+        url('../fonts/gooddognew.woff') format('woff'),
+        url('../fonts/gooddognew.ttf') format('truetype');
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
