@@ -11,6 +11,92 @@ body {
     margin: 0;
 }
 
+.toggle {
+
+    width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.yearly {
+    font-size: 24px;
+    opacity: 0.5;
+    padding-left: 24px;
+}
+
+.monthly {
+    font-size: 24px;
+    padding-right: 24px;
+}
+
+.discount {
+    font-family: 'gooddog_newregular';
+    text-align: center;
+    font-size: 14px;
+    padding-left: 33px;
+    transform: rotate(6deg);
+    margin-top: -38px;
+}
+
+.discount::after {
+    content: "";
+    position: absolute;
+    right: 27px;
+    display: flex;
+    flex-direction: column;
+    height: 34.45px;
+    width: 44.39px;
+    background-image: url('../images/icons/Arrow\ 03.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 3px;
+}
+
+.tg-swich {
+    height: 52px;
+    width: 104px;
+    background: #FFFFFF;
+    border-radius: 99px;
+    position: relative;
+
+}
+
+/* 'этот оставить комментарием */
+/* .tg-swich>.slider {
+    background: #A8FF35;
+    border-radius: inherit;
+    width: 36px;
+    height: 36px;
+    top: 8px;
+    left: 8px;
+    position: absolute;
+
+} */
+
+.tg-swich::before {
+    content: "";
+    display: block;
+    background: #A8FF35;
+    border-radius: inherit;
+    width: 36px;
+    height: 36px;
+    top: 8px;
+    left: 8px;
+    position: absolute;
+
+}
+
+.tg-swich--on::before {
+    left: auto;
+    right: 8px;
+}
+
+
 h2,
 h3,
 p,
@@ -124,9 +210,7 @@ ul {
     flex: 1 0 auto;
 }
 
-#col {
-
-}
+#col {}
 
 .price-item__price,
 .price-item__list {
@@ -166,6 +250,8 @@ ul {
     /* background-position: center; */
 }
 
+
+
 .price-item__list li:last-child {
     margin-bottom: 0;
 }
@@ -200,9 +286,11 @@ ul {
 }
 
 
+@font-face {
+    font-family: 'gooddog_newregular';
+    src: url('../fonts/gooddognew-webfont.woff2') format('woff2'),
+        url('../fonts/gooddognew.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-
-
-
-
-
+}
