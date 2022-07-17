@@ -16,31 +16,14 @@ body {
 
 h1,
 h2,
+h3,
 p {
    margin: 0;
-   overflow: hidden;
-   text-overflow: ellipsis;
-   white-space: nowrap;
 }
 
 a {
    text-decoration: none;
    transition: .3s;
-}
-
-h1 {
-   font-style: normal;
-   font-weight: 700;
-   font-size: 24px;
-}
-
-p {
-   font-style: normal;
-   font-weight: 400;
-   font-size: 18px;
-   color: rgba(12, 17, 31, 0.6);
-   line-height: 32px;
-   text-overflow: ellipsis;
 }
 
 .section {
@@ -72,27 +55,29 @@ p {
    box-sizing: border-box;
 }
 
-.price-item {
+.tour-item {
    background-color: #F7F7F7;
    border-radius: 30px;
    width: 400px;
+   overflow: hidden;
 }
 
-.price-item__head {
+.tour-head {
    position: relative;
-
+   z-index: 1;
 }
 
-.price-item__head_img {
-   border-radius: 30px 30px 0px 0px;
-   max-width: 100%;
+.tour-head__img {
    width: 100%;
 }
 
-.price-item__head_rating {
+.tour-head__rating {
    position: absolute;
    top: 20px;
    left: 20px;
+}
+
+.rating {
    display: flex;
    align-items: center;
    padding: 6px 6px 6px 52px;
@@ -106,7 +91,7 @@ p {
    color: #fff;
 }
 
-.star {
+.rating__star {
    position: absolute;
    left: 6px;
    width: 32px;
@@ -116,7 +101,7 @@ p {
    border-radius: 58px;
 }
 
-.star::before {
+.rating__star::before {
    content: '';
    background-image: url(../images/icons/Star.svg);
    background-repeat: no-repeat;
@@ -131,16 +116,17 @@ p {
    transform: translate(-50%, -50%);
 }
 
-.price-item__head_country {
+.tour-head__country {
    position: absolute;
    top: 20px;
    right: 20px;
+}
+
+.country {
    display: flex;
    align-items: center;
    padding-left: 40px;
    font-size: 18px;
-   /* width: 112px;
-   height: 44px; */
    background-size: cover;
    padding: 12px 12px 12px 40px;
    background: rgba(255, 255, 255, 0.22);
@@ -149,7 +135,7 @@ p {
    color: #fff;
 }
 
-.price-item__head_country::before {
+.tour-head__country::before {
    content: '';
    background-image: url(../images/icons/fluent_location-16-filled.svg);
    background-repeat: no-repeat;
@@ -161,7 +147,7 @@ p {
    left: 12;
 }
 
-.price-item__head_play {
+.tour-head__play {
    position: absolute;
    background: rgba(255, 255, 255, 0.22);
    backdrop-filter: blur(10px);
@@ -177,7 +163,7 @@ p {
    border: 0;
 }
 
-.price-item__head_play::before {
+.tour-head__play::before {
    content: '';
    background-image: url(../images/icons/bi_play-circle-fill.svg);
    background-repeat: no-repeat;
@@ -191,63 +177,71 @@ p {
 }
 
 
-
-.price-item__img-blur {
+.tour-head__img-blur {
+   margin: 0 auto;
    margin-top: -266px;
-   border-radius: 30px;
-   margin-left: auto;
-   margin-right: auto;
    display: block;
-   width: 364px;
-   height: 286px;
+   width: calc(100% - 36px);
    opacity: 0.3;
    filter: blur(40px);
+   position: relative;
+   z-index: -1;
 }
 
-.price-item__description {
+.tour-body {
    border-radius: 0px 0px 30px 30px;
    background-color: #fff;
-   height: 144px;
    padding: 20px;
-   margin-top: -21px;
-
-   /* position: relative; */
 }
 
-/* .price-item__description_link{
-position: absolute;
-padding-right: 75px;
-margin-bottom: 20px;
-display: flex;
-justify-content: flex-end;
-align-items: center;
-} */
-
-.price-item__description .title {
+.tour-body__head {
+   font-style: normal;
+   font-weight: 700;
+   font-size: 24px;
    padding-bottom: 12px;
 }
-
-
-.price-item__price {
-   height: 155px;
-   display: flex;
-   justify-content: space-between;
-   align-items: flex-end;
-   padding: 20px 20px 24px;
-   margin-top: -59px;
-}
-
-.price-item__price span {
+.tour-body__description {
+   font-style: normal;
    font-weight: 400;
    font-size: 18px;
-   color: rgba(12, 17, 31, 0.6);
+   color: #6c6e79;
+   line-height: 32px;
 }
 
-.harga {
+.tour-body__description a {
+   color: #8482FF;
+}
+
+
+.tour-item__footer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 20px 24px;
+}
+
+.tour-price__head {
+   font-style: normal;
+   font-weight: 400;
+   font-size: 18px;
+   color: #6c6e79;
+   line-height: 32px;
    padding-bottom: 4px;
 }
 
-.price-item__button {
+.tour-price__description {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.tour-price__description span {
+   font-weight: 400;
+   font-size: 18px;
+   color: #6c6e79;
+}
+
+.tour-item__button {
    background: linear-gradient(135deg, #8482FF 0%, #7723FE 100%);
    width: 117px;
    height: 43px;
