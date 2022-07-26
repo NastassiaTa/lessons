@@ -1,0 +1,82 @@
+@import './variables.scss';
+@import './paragraph.scss';
+
+* {
+   box-sizing: border-box;
+}
+
+
+.accent {
+   color: $accentColoor;
+   border: 1px solid $secondaryColor;
+}
+
+
+.secondary {
+   color: $secondaryColor;
+}
+
+
+.primary {
+   color: $primaryColor;
+}
+
+// mixin
+$color: #cdd2ff;
+
+@mixin colorBtn($color, $background) {
+   color: $color;
+   background: $background;
+}
+
+.btn {
+   height: 40px;
+   width: 300px;
+   &--primary {
+      @include colorBtn($color, #1709fa);
+   }
+
+   &--secondary {
+      @include colorBtn(#cdffd2, #1d7d43);
+   }
+}
+
+// extend
+%message-shared {
+   border: 1px solid #ccc;
+   padding: 10px;
+   color: #333;
+ }
+ 
+ .message {
+   @extend %message-shared;
+ }
+ 
+ .success {
+   @extend %message-shared;
+   border-color: green;
+ }
+ 
+ .error {
+   @extend %message-shared;
+   border-color: red;
+ }
+ 
+ .warning {
+   @extend %message-shared;
+   border-color: yellow;
+ }
+
+ // Math
+ $base-padding: 100px;
+ $mobile-padding: 50px;
+
+ .section {
+   padding: $base-padding 0;
+
+   @media screen {
+      @media (max-width: 900px) {
+         padding: ($base-padding / 2) + 2 0;
+      }
+   }
+ }

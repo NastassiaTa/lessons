@@ -1,0 +1,32 @@
+// вложенности
+.paragraph {
+
+    .accent {
+       color: $secondaryColor;
+    }
+ 
+    &__item {
+       $parent: &;
+ 
+       margin-bottom: 10px;
+       display: block;
+       &--accent {
+          color: $accentColoor;
+          border: 1px solid $secondaryColor;
+ 
+          &:hover {
+             ~ #{$parent}--secondary {
+                opacity: 0;
+             }
+          }
+       }
+ 
+       &--secondary {
+          color: $secondaryColor;
+       }
+ 
+       &--primary {
+          color: $primaryColor;
+       }
+    }
+ }
