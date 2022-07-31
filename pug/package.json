@@ -1,10 +1,10 @@
 {
-  "name": "scsslessons",
+  "name": "puglessons",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "browserslist": "> 0.5%, last 2 versions, not dead",
-  "source": "index.html",
+  "source": "index.pug",
   "scripts": {
     "start": "parcel",
     "build": "parcel build"
@@ -13,6 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.2",
+    "@parcel/transformer-pug": "^2.6.2",
     "parcel": "^2.6.0"
   }
 }

@@ -1,0 +1,79 @@
+//- doctype html
+//- html(lang="en")
+//-     head
+//-         meta(charset="UTF-8")
+//-         meta(http-equiv="X-UA-Compatible", content="IE=edge")
+//-         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+//-         title Pug lessons
+//-         link(rel="stylesheet", href="./assets/style/style.scss")
+//-     body
+    
+//-         - var btnType = 'info';
+//-         - let btnSize = 'lg';
+//-         p какойто текст
+//-             span span text
+
+//-         p(
+//-             class="testClass"
+//-             class="testClass"
+//-             class="testClass"
+//-         ) Test
+//-         p.testClass Test
+//-         p#testID Test
+//-         p.testClass(id="111111") Test
+//-         button(class=`testClass ${btnSize}`) Test button
+
+//-         ul(title="Test")
+//-             li Todo 1
+//-                 a 123445
+
+//-         //- div
+//-         .testDiv 111
+//-         #testDiv 222
+
+//-         //- picture
+//-         picture
+//-             source(media="(max-width: 500px)", srcset="https://picsum.photos/100")
+//-             img(src="https://picsum.photos/500")
+        
+
+//-         //- циклы
+//-         h1 Each
+//-         - let imgs = [1, 2, 3, 4, 5];
+
+//-         each img in imgs
+//-             picture
+//-                 img(src=`https://picsum.photos/${img}00`)
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Travel-Block
+        link(rel="stylesheet", href="./assets/style/style.css")
+    body
+        section.section
+            .row
+                - let tours = [{ rating: "5.0", country: "Turkey", img: "./assets/images/Rectangle 1434.png", title: "Cappadocia", description: "Mudah salah satu dunia yang paling\nterkenal balon...", link: { href: "https://vacationto.site/where-to-stay-in-athens-the-best-neighborhoods-for-your-visit/", text: "Baca Selengkapnya" } ,price: "1.799,000", button: "Pesan Tiket" }, { rating: "4.5", country: "Egypt", img: "./assets/images/Rectangle 1434.png", title: "Luxor", description: "Melihat lembah raja-raja mesir dari keranjang balon...", link: { href: "https://vacationto.site/the-end-and-a-new-beginning/", text: "Baca Selengkapnya" } ,price: "1.999,000", button: "Pesan Tiket" }];
+                each tour in tours
+                    .col
+                        .tour-item
+                            .tour-head
+                                img(class="tour-head__img", src="./assets/images/Rectangle 1434.png", alt="")
+                                .tour-head__rating.rating #{tour.rating}
+                                    .rating__star
+                                a(href="#", class="tour-head__country country") #{tour.country}
+                                .tour-head__play
+                                img(class="tour-head__img-blur", src="./assets/images/Rectangle 1434.png", alt="")
+                            .tour-body
+                                h3.tour-body__head #{tour.title}
+                                p.tour-body__description #{tour.description}
+                                    a(href=`${tour.link.href}`) #{tour.link.text}
+                            .tour-item__footer
+                                .tour-price
+                                    h3.tour-price__head Harga
+                                    p.tour-price__description Rp. #{tour.price}
+                                        span /Orang
+                                button(class="tour-item__button") #{tour.button}

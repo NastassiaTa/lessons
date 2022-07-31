@@ -1,0 +1,296 @@
+* {
+   box-sizing: border-box;
+}
+
+img {
+   width: 100%;
+}
+
+body {
+   font-family: 'Effra';
+   font-family: 'Roboto', sans-serif;
+   font-style: normal;
+   background: #F5F5F5;
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+   margin: 0;
+}
+
+a {
+   text-decoration: none;
+   transition: .3s;
+}
+
+.section {
+   width: 1329px;
+   height: 732px;
+   background: #fff;
+   margin: 0;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+
+.row {
+   display: flex;
+   flex-wrap: nowrap;
+   margin-left: -20px;
+   margin-right: -20px;
+}
+
+.col {
+   padding: 0 20px;
+   flex: 0 0 50%;
+   max-width: 50%;
+   box-sizing: border-box;
+}
+
+.tour-item {
+   background-color: #F7F7F7;
+   border-radius: 30px;
+   width: 400px;
+   overflow: hidden;
+}
+
+.tour-head {
+   position: relative;
+   z-index: 1;
+}
+
+.tour-head__img {
+   width: 100%;
+}
+
+.tour-head__rating {
+   position: absolute;
+   top: 20px;
+   left: 20px;
+}
+
+.rating {
+   display: flex;
+   align-items: center;
+   padding: 6px 6px 6px 52px;
+   font-size: 18px;
+   width: 94px;
+   height: 44px;
+   border-radius: 46px;
+   background: rgba(12, 17, 31, 0.34);
+   box-shadow: inset 7px 0px 20px rgba(255, 255, 255, 0.15);
+   backdrop-filter: blur(8px);
+   color: #fff;
+}
+
+.rating__star {
+   position: absolute;
+   left: 6px;
+   width: 32px;
+   height: 32px;
+   background: linear-gradient(135deg, #F9EC7D 0%, #F5B100 100%);
+   box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.15), inset 7px 0px 20px rgba(255, 255, 255, 0.15);
+   border-radius: 58px;
+}
+
+.rating__star::before {
+   content: '';
+   background-image: url(../images/icons/Star.svg);
+   background-repeat: no-repeat;
+   background-size: contain;
+   position: absolute;
+   width: 16px;
+   height: 16px;
+   display: block;
+   left: 0;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.tour-head__country {
+   position: absolute;
+   top: 20px;
+   right: 20px;
+}
+
+.country {
+   display: flex;
+   align-items: center;
+   padding-left: 40px;
+   font-size: 18px;
+   background-size: cover;
+   padding: 12px 12px 12px 40px;
+   background: rgba(255, 255, 255, 0.22);
+   backdrop-filter: blur(15px);
+   border-radius: 100px;
+   color: #fff;
+}
+
+.tour-head__country::before {
+   content: '';
+   background-image: url(../images/icons/fluent_location-16-filled.svg);
+   background-repeat: no-repeat;
+   background-size: contain;
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   display: block;
+   left: 12;
+}
+
+.tour-head__play {
+   position: absolute;
+   background: rgba(255, 255, 255, 0.22);
+   backdrop-filter: blur(10px);
+   border-radius: 200px;
+   width: 84px;
+   height: 84px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   cursor: pointer;
+   transition: 0.3s;
+   outline: none;
+   border: 0;
+}
+
+.tour-head__play::before {
+   content: '';
+   background-image: url(../images/icons/bi_play-circle-fill.svg);
+   background-repeat: no-repeat;
+   background-size: contain;
+   position: absolute;
+   width: 60px;
+   height: 60px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+
+.tour-head__img-blur {
+   margin: 0 auto;
+   margin-top: -266px;
+   display: block;
+   width: calc(100% - 36px);
+   opacity: 0.3;
+   filter: blur(40px);
+   position: relative;
+   z-index: -1;
+}
+
+.tour-body {
+   border-radius: 0px 0px 30px 30px;
+   background-color: #fff;
+   padding: 20px;
+}
+
+.tour-body__head {
+   font-style: normal;
+   font-weight: 700;
+   font-size: 24px;
+   padding-bottom: 12px;
+}
+.tour-body__description {
+   font-style: normal;
+   font-weight: 400;
+   font-size: 18px;
+   color: #6c6e79;
+   line-height: 32px;
+}
+
+.tour-body__description a {
+   color: #8482FF;
+}
+
+
+.tour-item__footer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 20px 24px;
+}
+
+.tour-price__head {
+   font-style: normal;
+   font-weight: 400;
+   font-size: 18px;
+   color: #6c6e79;
+   line-height: 32px;
+   padding-bottom: 4px;
+}
+
+.tour-price__description {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.tour-price__description span {
+   font-weight: 400;
+   font-size: 18px;
+   color: #6c6e79;
+}
+
+.tour-item__button {
+   background: linear-gradient(135deg, #8482FF 0%, #7723FE 100%);
+   width: 117px;
+   height: 43px;
+   color: #fff;
+   border: 0px;
+   border-radius: 45px;
+   font-weight: 400;
+   font-size: 14px;
+   cursor: pointer;
+   transition: 0.3s;
+   outline: none;
+}
+
+
+/* Подключение шрифтов */
+@font-face {
+   font-family: 'Effra';
+   src: local('Effra Regular'), local('Effra-Regular'),
+      url('../fonts/Effra.woff2') format('woff2'),
+      url('../fonts/Effra.woff') format('woff'),
+      url('../fonts/Effra.ttf') format('truetype');
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
+
+
+@font-face {
+   font-family: 'Effra';
+   src: local('Effra Bold'), local('Effra-Bold'),
+      url('../fonts/Effra-Bold.woff2') format('woff2'),
+      url('../fonts/Effra-Bold.woff') format('woff'),
+      url('../fonts/Effra-Bold.ttf') format('truetype');
+   font-weight: 700;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'gooddognew';
+   src: local('Effra Bold'), local('Effra-Bold'),
+      url('../fonts/gooddognew.woff2') format('woff2'),
+      url('../fonts/gooddognew.woff') format('woff'),
+      url('../fonts/gooddognew.ttf') format('truetype');
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
